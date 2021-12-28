@@ -15,7 +15,6 @@
   margin: auto;
   border: 1px solid #888;
   width: 30%;
-  
 }
 
 .modal-header {
@@ -30,14 +29,12 @@
 .modal-body,
 .modal-footer {
   padding: 10px;
-  
 }
 
-.modal-body{
+.modal-body {
   background-color: #fefefe;
   position: relative;
-  height: 400px;
-
+  height: 500px;
 }
 
 .bold {
@@ -49,18 +46,17 @@
   justify-content: center;
   align-items: center;
 }
-.search-container{
+.search-container {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
   border: 1px solid gray;
-  float: left;
-  padding: 0 10px;
+  padding: 0 15px;
   width: 45%;
 }
-.title{
-  padding: 0 10px;
+.title {
+  padding: 0 15px;
   font-size: 35px;
 }
 .search-field {
@@ -70,48 +66,43 @@
   outline: none;
   border: none;
 }
-.close {
-  color: #3c368a;
-  float: right;
-  font-size: 35px;
-  font-weight: bolder;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0 10px;
 }
 
-td,
-th {
+td {
   text-align: left;
   padding: 15px 10px;
+}
+th {
+  text-align: left;
+  padding: 15px 10px 5px 10px;
+
+}
+
+tr {
+  /* border: 2px solid #3c368a !important; */
 }
 
 tr:nth-child(odd) {
   background-color: #3c368a;
   color: white;
-  margin: 10px;
   font-size: 15px;
+  border: 1px solid #3c368a;
 }
 
 tr:nth-child(even) {
-  border: 1px solid #3c368a;
+  border: 1px solid black !important;
   color: black;
-  margin: 10px;
   font-size: 15px;
 }
 tr:first-child {
   background-color: transparent;
   color: #000;
+  border: none;
 }
 
 button {
@@ -121,29 +112,34 @@ button {
   width: 30%;
   position: absolute;
   bottom: 10px;
-  right: 10px; 
+  right: 10px;
   outline: none;
   border: none;
 }
 
-@media screen and (max-width:768px) {
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        border: 1px solid #888;
-        width: 95%;
-        height: 60%;
-        position: relative;
-      }
+@media screen and (max-width: 768px) {
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 95%;
+    height: 60%;
+    position: relative;
+  }
 
-      .search-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 25px;
-        border: 1px solid gray;
-        float: left;
-        padding: 0 10px;
-        width: 75%;
-      }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid gray;
+    padding: 0 10px;
+    width: 75%;
+  }
+ 
+  .modal-body {
+    background-color: #fefefe;
+    position: relative;
+    height: 500px;
+  }
 }
