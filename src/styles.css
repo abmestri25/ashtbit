@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .modal {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -14,7 +20,7 @@
 .modal-content {
   margin: auto;
   border: 1px solid #888;
-  width: 30%;
+  width: 33%;
 }
 
 .modal-header {
@@ -53,73 +59,57 @@
   border-radius: 25px;
   border: 1px solid gray;
   padding: 0 15px;
-  width: 45%;
+  width: 42%;
 }
 .title {
   padding: 0 15px;
   font-size: 35px;
 }
 .search-field {
-  padding: 10px 20px;
+  padding: 10px 5px;
   border-radius: 25px;
   font-size: 16px;
   outline: none;
   border: none;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0 10px;
-}
-
-td {
-  text-align: left;
-  padding: 15px 10px;
-}
-th {
-  text-align: left;
-  padding: 15px 10px 5px 10px;
-
-}
-
-tr {
-  /* border: 2px solid #3c368a !important; */
-}
-
-tr:nth-child(odd) {
-  background-color: #3c368a;
-  color: white;
-  font-size: 15px;
-  border: 1px solid #3c368a;
-}
-
-tr:nth-child(even) {
-  border: 1px solid black !important;
-  color: black;
-  font-size: 15px;
-}
-tr:first-child {
-  background-color: transparent;
-  color: #000;
-  border: none;
-}
 
 button {
   background-color: #3c368a;
   color: white;
   padding: 10px 20px;
   width: 30%;
-  position: absolute;
   bottom: 10px;
   right: 10px;
   outline: none;
   border: none;
+  position: absolute;
+}
+
+@media  screen and (max-width : 1024px) {
+  .modal-content {
+    margin: auto;
+    border: 1px solid #888;
+    width: 95%;
+    height: 60%;
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 768px) {
+
+  .container{
+    padding: 10px 0;
+  }
+  
+  .search-field {
+    padding: 10px 5x;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+  }
   .modal-content {
-    background-color: #fefefe;
     margin: auto;
     border: 1px solid #888;
     width: 95%;
@@ -136,10 +126,219 @@ button {
     padding: 0 10px;
     width: 75%;
   }
- 
+
   .modal-body {
     background-color: #fefefe;
     position: relative;
-    height: 500px;
+    height: 450px;
+  }
+
+  .headers{
+    display: none !important;
+  }
+  
+ 
+ 
+}
+
+
+.row {
+  --ast-gap-x: 1.5rem;
+  --ast-gap-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--ast-gap-y) * -1);
+  margin-right: calc(var(--ast-gap-x) * -.5);
+  margin-left: calc(var(--ast-gap-x) * -.5);
+}
+
+.row:nth-child(even){
+  background-color: #3c368a;
+  color: white;
+  font-size: 15px;
+  border: 1px solid #3c368a;
+  margin: 5px 0;
+  padding: 10px 5px;
+}
+
+.row:nth-child(odd){
+  color: black;
+  font-size: 15px;
+  border: 1px solid #3c368a;
+  margin: 5px 0;
+  padding: 10px 5px;
+}
+
+
+
+.row:first-child{
+  color: black;
+  font-size: 13px;
+  border: none;
+  margin: 5px 0;
+  padding: 10px 5px;
+}
+
+
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  max-width: 100%;
+  padding-right: calc(var(--ast-gap-x) * 2.5);
+  padding-left: calc(var(--ast-gap-x) * .3);
+  margin-top: var(--ast-gap-y);
+}
+
+
+@media (min-width : 767px){
+  .col-md-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-md-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-md-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+  .col-md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .col-sm-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-sm-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-sm-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-sm-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+  .col-sm-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .col-lg-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .col-lg-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .col-lg-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .col-lg-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-lg-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .col-lg-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .col-lg-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+  .col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }
