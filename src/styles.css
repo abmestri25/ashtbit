@@ -130,6 +130,13 @@ button {
   margin-top: var(--ast-gap-y);
 }
 
+.ondesk {
+  display: inline-flex;
+}
+.onmobile {
+  display: none !important;
+}
+
 @media screen and (max-width: 1024px) {
   .modal-content {
     margin: auto;
@@ -141,8 +148,26 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  .onmobile {
+    display: block !important;
+  }
+  .ondesk {
+    display: none !important;
+  }
+
+  .space-around {
+    display: flex;
+  }
+  .justify-center {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ml-5 {
+    margin-left: 10px;
+  }
   .row {
-    --ast-gap-x: 1.5rem;
+    --ast-gap-x: 1rem;
     --ast-gap-y: 0;
     display: flex;
     flex-wrap: wrap;
@@ -197,6 +222,23 @@ button {
 
   .headers {
     display: none !important;
+  }
+
+  .row:nth-child(even) {
+    background-color: transparent;
+    color: black;
+    font-size: 15px;
+    border: 1px solid #3c368a;
+    margin: 5px 0;
+    padding: 10px 5px;
+  }
+  
+  .row:nth-child(odd) {
+    color: white;
+    font-size: 15px;
+    border: 1px solid #3c368a;
+    margin: 5px 0;
+    padding: 10px 5px;
   }
 }
 
